@@ -1,7 +1,6 @@
 from typing import List, Union, Optional, Literal
 import dataclasses
 import os
-from vllm import LLM, SamplingParams
 from tenacity import (
     retry,
     stop_after_attempt,  # type: ignore
