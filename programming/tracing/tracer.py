@@ -62,7 +62,7 @@ def get_trace(prog, funcname):
     # run in command line python -m trace -t tmp.py > trace
     import subprocess
     try:
-        res=subprocess.run(["python3", "-m", "trace", "-t", fname], stdout=subprocess.PIPE, stderr=subprocess.PIPE, timeout=5)
+        res=subprocess.run(["python3", "-m", "trace", "-t", fname], stdout=subprocess.PIPE, stderr=subprocess.PIPE, timeout=None)
     except AssertionError:
         # This is expected if fail the test assetion
         pass
